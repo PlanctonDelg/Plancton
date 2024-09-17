@@ -1,17 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
+/* Réinitialisation de quelques styles par défaut */
+body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
+/* Style global du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000; /* Fond noir */
+    line-height: 1.6;
+}
+
+/* Style pour l'en-tête */
 header {
-    background-color: #333;
-    color: white;
     padding: 20px;
-    text-align: center;
+    position: relative;
 }
 
+header h1 {
+    font-size: 2.5em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Style pour la navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -19,25 +34,51 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
-nav ul li a {
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
+    font-size: 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Style pour les sections principales */
+main {
+    padding: 20px;
 }
 
 section {
-    padding: 50px;
-    background-color: white;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
+.category {
+    margin-bottom: 20px;
+}
+
+.category h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.category p {
+    font-size: 1em;
+}
+
+/* Style pour le pied de page */
 footer {
+    padding: 10px;
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #222;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.8em;
 }
