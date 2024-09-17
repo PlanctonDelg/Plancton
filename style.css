@@ -76,33 +76,19 @@ section#categories {
     font-size: 1.2em;
     font-weight: bold;
     text-decoration: none; /* Pas de soulignement pour les bulles */
-    transition: background-color 0.3s, color 0.3s; /* Transition douce pour les effets */
-    position: absolute;
-}
-
-.bubble:nth-child(1) {
-    top: 30%;
-    left: 25%;
-}
-
-.bubble:nth-child(2) {
-    top: 30%;
-    left: 50%;
-}
-
-.bubble:nth-child(3) {
-    top: 30%;
-    left: 75%;
-}
-
-.bubble a {
-    color: #000; /* Texte en noir */
-    text-decoration: none; /* Pas de soulignement */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Transition douce pour les effets */
+    position: relative;
 }
 
 .bubble:hover {
     background-color: #000; /* Fond noir au survol */
     color: #fff; /* Texte en blanc au survol */
+    transform: scale(1.1); /* Agrandir légèrement la bulle au survol */
+}
+
+.bubble a {
+    color: #000; /* Texte en noir */
+    text-decoration: none; /* Pas de soulignement */
 }
 
 /* Style pour le pied de page */
