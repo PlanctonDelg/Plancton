@@ -23,9 +23,8 @@ header {
 
 /* Centrer le titre */
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 50px; /* Ajouter un espacement sous le titre */
-    position: relative;
 }
 
 /* Retirer le soulignement des liens */
@@ -45,17 +44,18 @@ main {
 .bubble {
     border: 3px solid #fff; /* Contour blanc */
     border-radius: 50%; /* Forme ronde */
-    width: 250px; /* Taille des bulles, beaucoup plus grandes */
-    height: 250px;
+    width: 300px; /* Taille des bulles, beaucoup plus grandes */
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
     position: absolute;
     transition: transform 0.3s;
     color: #fff;
+    background-color: transparent; /* Pas de fond */
 }
 
 /* Agrandir les bulles au survol */
@@ -70,7 +70,7 @@ main {
         transform: translate(0, 0);
     }
     50% {
-        transform: translate(calc(100vw - 250px), calc(100vh - 250px)); /* Bouge de manière aléatoire dans tout l'écran */
+        transform: translate(calc(100vw - 300px), calc(100vh - 300px)); /* Bouge de manière aléatoire dans tout l'écran */
     }
     100% {
         transform: translate(0, 0);
