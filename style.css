@@ -55,11 +55,12 @@ main {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 120px); /* Ajuster la hauteur pour centrer verticalement */
+    position: relative;
 }
 
 section#categories {
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Espacement entre les bulles */
 }
 
 .bubble {
@@ -76,6 +77,22 @@ section#categories {
     font-weight: bold;
     text-decoration: none; /* Pas de soulignement pour les bulles */
     transition: background-color 0.3s, color 0.3s; /* Transition douce pour les effets */
+    position: absolute;
+}
+
+.bubble:nth-child(1) {
+    top: 30%;
+    left: 25%;
+}
+
+.bubble:nth-child(2) {
+    top: 30%;
+    left: 50%;
+}
+
+.bubble:nth-child(3) {
+    top: 30%;
+    left: 75%;
 }
 
 .bubble a {
@@ -101,4 +118,3 @@ footer {
 footer p {
     font-size: 0.8em;
 }
-
