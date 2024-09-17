@@ -1,10 +1,13 @@
-document.addEventListener("scroll", function() {
-    let elements = document.querySelectorAll(".fade-in");
-    elements.forEach((element) => {
-        let position = element.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.3;
-        if (position < screenPosition) {
-            element.classList.add("active");
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    const bubbles = document.querySelectorAll('.bubble');
+
+    bubbles.forEach(bubble => {
+        bubble.addEventListener('click', function() {
+            // Ajoute un effet de clic en ajoutant une classe temporaire
+            this.classList.add('clicked');
+            setTimeout(() => {
+                this.classList.remove('clicked');
+            }, 300);
+        });
     });
 });
