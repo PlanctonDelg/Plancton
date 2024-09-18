@@ -1,111 +1,39 @@
-/* Réinitialisation des styles par défaut */
-body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Style global du corps de la page */
+/* Ajouter les styles pour que les bulles bougent à l'intérieur de la "boîte" */
 body {
-    font-family: Arial, sans-serif;
-    color: #fff; /* Texte en blanc */
-    background-color: #000; /* Fond noir */
-    height: 100vh;
-    overflow: hidden; /* Empêche le débordement lors des animations */
+  background-color: black;
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  overflow: hidden; /* Empêche le défilement */
 }
 
-/* Style pour l'en-tête */
-header {
-    padding: 20px;
-    position: relative;
-    text-align: center; /* Centrer le titre */
-}
-
-/* Centrer le titre */
 header h1 {
-    font-size: 3em;
-    margin-bottom: 50px; /* Ajouter un espacement sous le titre */
+  text-align: center;
+  margin-top: 50px;
+  font-size: 4em;
 }
 
-/* Retirer le soulignement des liens */
-a {
-    text-decoration: none;
-    color: #fff; /* Texte blanc */
-}
-
-/* Style pour les bulles */
-main {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 150px);
-}
-
-/* Styles des bulles géantes */
 .bubble {
-    border: 3px solid #fff; /* Contour blanc */
-    border-radius: 50%; /* Forme ronde */
-    width: 300px; /* Taille des bulles, beaucoup plus grandes */
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: bold;
-    position: absolute;
-    transition: transform 0.3s;
-    color: #fff;
-    background-color: transparent; /* Pas de fond */
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
 }
 
-/* Agrandir les bulles au survol */
-.bubble:hover {
-    transform: scale(1.1); /* Agrandissement au survol */
-    background-color: rgba(255, 255, 255, 0.1); /* Légère transparence blanche */
-}
-
-/* Animation pour le mouvement aléatoire des bulles */
-@keyframes moveBubble {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(calc(100vw - 300px), calc(100vh - 300px)); /* Bouge de manière aléatoire dans tout l'écran */
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-/* Appliquer l'animation à chaque bulle avec des durées différentes */
-.bubble:nth-child(1) {
-    animation: moveBubble 6s ease-in-out infinite;
-    top: 10%;
-    left: 20%;
-}
-
-.bubble:nth-child(2) {
-    animation: moveBubble 8s ease-in-out infinite;
-    top: 50%;
-    left: 50%;
-}
-
-.bubble:nth-child(3) {
-    animation: moveBubble 10s ease-in-out infinite;
-    top: 20%;
-    left: 70%;
-}
-
-/* Pied de page */
 footer {
-    padding: 10px;
-    text-align: center;
-    background-color: #222;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: white;
 }
 
-footer p {
-    font-size: 0.8em;
+a {
+  color: white;
+  text-decoration: none;
 }
